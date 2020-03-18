@@ -1,0 +1,10 @@
+---
+
+- hosts: webserver #host on that you want to execute
+  remote_user: name  # username in the webserver hosts
+  become: yes 
+  become_method: sudo 
+  #or else you can also mention the different user name
+  #become_user: webadmin
+ 
+  
