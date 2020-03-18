@@ -1,0 +1,10 @@
+---
+- hosts: webserver
+  order: shuffle
+  remote_user: name
+  become: yes
+  become_user: webadmin
+  tasks:
+    command: /sbin/setenforce 
+    ignore_error: yes
+    
