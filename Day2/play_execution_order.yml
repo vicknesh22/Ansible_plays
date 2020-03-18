@@ -1,0 +1,9 @@
+---
+
+- hosts: testserver
+	order: sorted 						#By default - it uses the inventory order, other options are reverse_sorted, reverse_inventory, shuffle.
+	gather_factes:true
+	tasks:
+		debug:
+			vars: inventory_names
+	
