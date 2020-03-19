@@ -1,0 +1,12 @@
+---
+- hosts: webservers
+  remote_user: name
+  become: yes
+  become_user: webadmin
+  tasks:
+    - name: something on apache
+      service:
+        name: httpd
+        command: cat /etc/apache2/hosts
+    notify:
+      - restart apache
