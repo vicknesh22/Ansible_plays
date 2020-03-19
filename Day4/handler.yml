@@ -1,0 +1,11 @@
+---
+handlers:
+    - name: restart the memcached
+      service: 
+        name: memcached
+        state: restarted
+    - name: restart the apache service
+      service: 
+        name: httpd
+        state: restarted
+    
