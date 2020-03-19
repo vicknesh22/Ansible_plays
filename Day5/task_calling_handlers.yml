@@ -1,0 +1,8 @@
+--- 
+- hosts: webservers
+  remote_user: root
+  tasks:
+    - name: restarting all services
+      command: echo "restart all the web services - memcached and apache"
+      notify: " restart web services"
+    
