@@ -1,0 +1,13 @@
+---
+hosts: webserver
+user: webadmin
+become: yes
+tasks:
+#adding the lists of tasks
+  - import_tasks: test_file.yml
+    vars: 
+      new_user: hello
+  #also you can add both import and include in the same main file
+  - include_tasks: test_file.yml
+    vars: 
+      new_user: bad_user
