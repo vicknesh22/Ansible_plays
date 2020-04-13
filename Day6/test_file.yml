@@ -1,0 +1,7 @@
+---
+#common tasks in a single file
+- name: test_tasks
+  command: /bin/foo
+- name: test_task_2
+  command: /bin/bar
+  
