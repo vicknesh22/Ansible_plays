@@ -1,0 +1,9 @@
+---
+hosts: webservingserver
+user: webadmin
+become: yes
+tasks:
+  - name: restart apache servers
+    include_tasks: handler.yml
+    ##or import to do the same
+    import_tasks: handler.yml
