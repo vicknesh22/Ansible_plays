@@ -1,0 +1,7 @@
+###this is a sample handler file to restart the apache server
+
+---
+- name: restart apache
+  service:
+    name: apache
+    state: restarted
